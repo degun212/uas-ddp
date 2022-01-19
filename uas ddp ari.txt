@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int umur,harga,total[1],jml_tiket,a;
+    float diskon;
+    
+    harga = 200000;
+	diskon = harga*0.9;
+    cout<<"Masukkan Umur Anda \n"<<endl;
+    cin>>umur;
+    
+    if (umur > 12 and umur <=62){
+			
+			cout<<"Masukkan Jumlah Tiket Yang Ingin Di Beli \n"<<endl;
+			cin>>jml_tiket;
+			total[0] = harga*jml_tiket;
+			total[1] = diskon*jml_tiket;
+			if(jml_tiket >5){
+				cout<<"Harga Tiket Anda Rp." <<diskon <<endl;
+				cout<<"Total Yang Harus Anda Bayar Rp." <<total[1]<<endl;
+			}else {
+				cout<<"Harga Tiket Anda Rp. " <<harga<<endl;
+				cout<<"Total Yang Harus Anda Bayar Rp." <<total[0]<<endl;
+			}
+			
+		}else {
+			cout<<"Maaf Umur anda < 12 Tahun Atau > 62 Tahun "<<endl;
+		}
+			for	(a = 3; a >=1 ; a--){
+			cout<<" \n ----Terima Kasih Sudah Belanja----"<<endl;
+		}
+		
+		return 0;
+	}
